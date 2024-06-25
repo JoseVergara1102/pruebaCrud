@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none;
+}
+.pagination {
+    display: flex;
+    justify-content: center; /* Centrar la paginación horizontalmente */
+    margin-top: 20px; /* Espacio superior */
+}
+
+.pagination > .page-item > .page-link {
+    font-size: 14px; /* Tamaño de fuente */
+    padding: 6px 12px; /* Espacio interno */
+    color: #333; /* Color del texto */
+    background-color: #f8f9fa; /* Color de fondo */
+    border: 1px solid #dee2e6; /* Borde */
+}
+
+.pagination > .page-item > .page-link:hover {
+    background-color: #e9ecef; /* Cambio de color al pasar el mouse */
+}
+
+.pagination > .page-item.active .page-link {
+    background-color: #007bff; /* Color de fondo activo */
+    border-color: #007bff; /* Borde activo */
+    color: #fff; /* Color del texto activo */
+}
+
+.pagination > .page-item.disabled .page-link {
+    color: #6c757d; /* Color del texto deshabilitado */
+    pointer-events: none; /* Deshabilitar eventos de clic */
+}
+
+.pagination > .page-item.disabled .page-link:hover {
+    background-color: #fff; /* Cambio de color al pasar el mouse (deshabilitado) */
+}
